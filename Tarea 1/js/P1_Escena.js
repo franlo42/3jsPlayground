@@ -28,7 +28,7 @@ render();
 function init()
 {
     // Motor de render
-    renderer = new THREE.WebGLRenderer();
+    renderer = new THREE.WebGLRenderer( {antialias: true} );
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.getElementById('container').appendChild( renderer.domElement );
 
