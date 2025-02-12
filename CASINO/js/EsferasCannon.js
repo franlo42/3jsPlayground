@@ -25,7 +25,7 @@ const stats = new Stats();
 // Mundo fisico
 let world;
 let disk;
-const nesferas = 20;
+const nesferas = 1;
 const esferas = [];
 const groundMaterial = new CANNON.Material("groundMaterial");
 const materialEsfera = new CANNON.Material("sphereMaterial");
