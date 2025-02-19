@@ -45,7 +45,7 @@ function init()
 
 function loadScene()
 {
-    const material = new THREE.MeshNormalMaterial();
+    const material = new THREE.MeshNormalMaterial( {wireframe:false});
 
     //LA LUZ
     const dirLight = new THREE.DirectionalLight(0xffffff, 10);
