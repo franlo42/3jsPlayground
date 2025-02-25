@@ -79,7 +79,7 @@ function init()
 function loadScene()
 {
     // Materiales 
-    const path ="./images/";
+    const path ="../images/";
     const texcubo = new THREE.TextureLoader().load(path+"wood512.jpg");
     const texsuelo = new THREE.TextureLoader().load(path+"r_256.jpg");
     texsuelo.repeat.set(4,3);
@@ -124,7 +124,7 @@ function loadScene()
 
     // Modelos importados
     const loader = new THREE.ObjectLoader();
-    loader.load('models/soldado/soldado.json', 
+    loader.load('../models/soldado/soldado.json', 
     function (objeto)
     {
         const soldado = new THREE.Object3D();
@@ -136,13 +136,13 @@ function loadScene()
             if(ob.isObject3D) ob.castShadow = true;
         });
         objeto.material.setValues( {map:
-         new THREE.TextureLoader().load("models/soldado/soldado.png")} );
+         new THREE.TextureLoader().load("../models/soldado/soldado.png")} );
     });
 
     // Importar un modelo en gltf
    const glloader = new GLTFLoader();
 
-   glloader.load( 'models/robota/scene.gltf', function ( gltf ) {
+   glloader.load( '../models/robota/scene.gltf', function ( gltf ) {
        gltf.scene.position.y = 1;
        gltf.scene.rotation.y = -Math.PI/2;
        gltf.scene.name = 'robota';
@@ -176,7 +176,7 @@ function loadScene()
 
     // Cine
     video = document.createElement('video');
-    video.src = "./videos/Pixar.mp4";
+    video.src = "../videos/Pixar.mp4";
     video.load();
     video.muted = true;
     video.play();

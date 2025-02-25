@@ -1,19 +1,21 @@
-<!DOCTYPE html>
-
+<!doctype html>
+<!--
+    3jsapp.html
+    Plantilla de carga de aplicaciones Threejs
+-->
 <html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>AGM Tarea 1</title>
+        <title>Aplicacion en Threejs</title>
         <style>
-            body{ background-color: #000;margin: 0px;overflow: hidden;}
+            body{ background-color: white;margin: 0px;overflow: hidden;}
             #info {
 	            position: absolute;
 	            bottom: 0px;
                 left: 50px;
 	            width: 30%;
 	            text-align: left;
-	            z-index: 1;
-                color: black;
+	            z-index: 1; 
             }
         </style>
     </head>
@@ -22,8 +24,7 @@
         <div id="container"></div>
 
         <div id="info">
-            <h2>AGM-Threejs</h2>
-            <h3>Tarea 1: Construir una escena con 5 figuras diferentes posicionadas en los cinco vertices de un pentagono regular alredor del origen y rotando sobre su eje y el del pentagono.</h3>
+            <h2>WebGL/Threejs Example</h2> 
         </div>
 
         <!-- Este enlace esta recomendado en la web de threejs -->
@@ -31,14 +32,11 @@
 
         <!-- Declaracion del espacio de nombres three -->
         <script type="importmap">
-        { "imports": { "three": "./lib/three.module.js" } }
+        { "imports": { "three": "../lib/three.module.js" } }
         </script>
 
-        <!-- Scripts de biblioteca -->
-        <script src="lib/OrbitControls.js"></script>
-
         <!-- Sustituir por el el script propio -->
-        <script type="module" src="js/P1_Escena.js"></script>
+        <script type="module" src="../js/P3_EscenaIluminada.js"></script>
 
     </body>
 </html>

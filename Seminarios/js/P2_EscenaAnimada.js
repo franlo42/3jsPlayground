@@ -120,7 +120,7 @@ function loadScene()
    // TO DO: Añadir a la escena un modelo importado en el centro del pentagono
    const glloader = new GLTFLoader();
 
-   glloader.load( 'models/robota/scene.gltf', function ( gltf ) {
+   glloader.load( '../models/robota/scene.gltf', function ( gltf ) {
        gltf.scene.position.set(0,-1,0);
        gltf.scene.rotation.y = -Math.PI/2;
        figures.add( gltf.scene );
