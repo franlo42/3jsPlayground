@@ -70,7 +70,7 @@ function init()
 
     // Instanciar el nodo raiz de la escena
     scene = new THREE.Scene();
-    ///scene.background = new THREE.Color(0.5,0.5,0.5);
+    //scene.background = new THREE.Color(0.5,0.5,0.5);
 
     // Instanciar la camara perspectiva y su control
     const ar = window.innerWidth/window.innerHeight;
@@ -157,7 +157,7 @@ function loadScene()
 
     // Modelos importados
     const loader = new THREE.ObjectLoader();
-    loader.load('models/soldado/soldado.json', 
+    loader.load('../models/soldado/soldado.json', 
     function (objeto)
     {
         const soldado = new THREE.Object3D();
@@ -169,13 +169,13 @@ function loadScene()
             if(ob.isObject3D) ob.castShadow = true;
         });
         objeto.material.setValues( {map:
-         new THREE.TextureLoader().load("models/soldado/soldado.png")} );
+         new THREE.TextureLoader().load("../models/soldado/soldado.png")} );
     });
 
     // Importar un modelo en gltf
    const glloader = new GLTFLoader();
 
-   glloader.load( 'models/robota/scene.gltf', function ( gltf ) {
+   glloader.load( '../models/robota/scene.gltf', function ( gltf ) {
        gltf.scene.position.y = 1;
        gltf.scene.rotation.y = -Math.PI/2;
        gltf.scene.name = 'robota';
@@ -209,7 +209,7 @@ function loadScene()
 
     // Cine
     video = document.createElement('video');
-    video.src = "./videos/Pixar.mp4";
+    video.src = "../videos/Pixar.mp4";
     video.load();
     video.muted = true;
     video.play();
