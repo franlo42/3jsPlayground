@@ -112,7 +112,7 @@ function init()
 function loadScene()
 {
     // Materiales 
-    const path ="./images/";
+    const path ="../images/";
     const texcubo = new THREE.TextureLoader().load(path+"wood512.jpg");
     const texsuelo = new THREE.TextureLoader().load(path+"r_256.jpg");
     texsuelo.repeat.set(4,3);
