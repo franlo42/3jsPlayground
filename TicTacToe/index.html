@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>3 en Raya en Three.js</title>
+  <style>
+    body { margin: 0; overflow: hidden; }
+    canvas { display: block; }
+    /* Menús superpuestos */
+    #menu, #endMenu {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      z-index: 100;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 20px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <!-- Menú de inicio -->
+  <div id="menu">
+    <h1>3 en Raya</h1>
+    <button id="startBtn">Comenzar Juego</button>
+  </div>
+  <!-- Menú de finalización -->
+  <div id="endMenu" style="display: none;">
+    <h1 id="endText"></h1>
+    <button id="restartBtn">Reiniciar Juego</button>
+  </div>
+
+  <!-- Importación de librerías -->
+  <script src="../Seminarios/lib/three.min_r140.js"></script>
+  <script src="../Seminarios/lib/tween_18.js"></script>
+  <script src="../Seminarios/lib/OrbitControls.js"></script>
+  <script src="../Seminarios/lib/lil-gui_0.16.1.js"></script>
+
+  <script src="../Seminarios/js/game.js"></script>
+</body>
+</html>
